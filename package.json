@@ -1,0 +1,20 @@
+{
+  "name": "cfdi-report-backend",
+  "version": "1.0.0",
+  "description": "POST /api/cfdi/parse Content-Type: application/json",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test:parse": "node src/tests/parseCfdi.local.test.js",
+    "test:csv": "node src/tests/generateCsv.local.test.js"
+  },
+  "author": "Edgar Morales",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "fast-xml-parser": "^5.3.3",
+    "xml2js": "^0.6.2"
+  }
+}
