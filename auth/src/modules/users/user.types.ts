@@ -7,3 +7,8 @@ export interface User {
   state: string;
   role: UserRole;
 }
+
+export interface UserLogin {
+  username: string;
+  password: string;
+}

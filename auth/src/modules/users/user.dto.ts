@@ -8,3 +8,8 @@ export const userDto = Joi.object<User>({
   state: Joi.string().required(),
   role: Joi.string().valid('USER_RFC', 'ADMIN').required(),
 });
+
+export const userLoginDto = Joi.object<User>({
+  username: Joi.string().required(),
+  password: Joi.string().required(),
+});

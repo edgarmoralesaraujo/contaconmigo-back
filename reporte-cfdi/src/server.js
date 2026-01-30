@@ -1,8 +1,10 @@
 const express = require('express');
 const reportsRoutes = require('./routes/reports.routes');
+const cors = require('cors');
 
 const app = express();
 app.use(express.json({ limit: '10mb' }));
+app.use(cors());
 
 app.use('/api', reportsRoutes);
 

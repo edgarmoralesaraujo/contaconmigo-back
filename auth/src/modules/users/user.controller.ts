@@ -11,4 +11,14 @@ export class UserController {
       next(err);
     }
   }
+
+  static async login(req: Request, res: Response, next: NextFunction) {
+    console.debug('Login attempt for user:', req.body.username);
+    try {
+      const token = await UserService.authenticate(req.body);
+      ok(res, { jwt: token });
+    } catch (err) {
+      next(err);
+    }
+  }
 }
